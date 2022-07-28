@@ -1,0 +1,19 @@
+.navbar-nav{
+    text-align: center;
+    margin: 0 auto;
+}
+.nav-link{
+    color:white;
+}
+.navbar-toggler-icon{
+    background-image: url("../img/whiteNavbaricon.png");
+}
+.logo{
+    text-align: center;
+    margin: 5px
+}
+.m_logo{
+    text-align: center;
+    height:50px;
+    width:50px;
+}
