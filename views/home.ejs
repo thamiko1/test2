@@ -1,46 +1,8 @@
 <%- include('partials/head')%>
 
 <body >
-  <nav class="navbar navbar-expand-lg bg-secondary">
-      <a class = "navbar-brand" href="/" style = "margin-left: 10px">
-        <img src ="/img/AnW_Logo.png" alt="AnW Logo" class="m_logo" style = "width: 120px; height: 75px;" >
-      </a>
-      <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav" style="margin-left: 0px;">
-            <a class="nav-link" href="#">Teacher Profile</a>
-            <!-- <a class="nav-link" href="#">Classes</a> -->
-            <!-- dropdown is not working -->
-            <div class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown link
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="#">English</a>
-                <a class="dropdown-item" href="#">Japanese</a>
-                <a class="dropdown-item" href="#">Mandarin</a>
-                <a class="dropdown-item" href="#">Korean</a>
-              </div>
-            </div>
-            <a class="nav-link" href="#">About us</a>
-            <a class="nav-link" href="#">Reviews</a>
-            <a class="nav-link" href="/login">Sign in / Sign up</a>
-          </div>
-          <form class="form-inline" style = "display: flex; height: 30px; ">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn bg-primary my-2 my-sm-0 " type="submit" style="margin-left : 10px;" >
-                <span class = "align-text-top">Search</span> 
-                <!-- need to be middle -->
-            </button>
-          </form>
-        </div>
-      </div>
-    </nav>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <%- include('partials/navbar')%>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -79,7 +41,7 @@
 
 <div class="card text-center">
   <div class="card-body">
-    <h2 class="card-title mb-3 mt-3">Have not have an account?</h2>
+    <h2 class="card-title mb-3 mt-3">Do you have an account?</h2>
     <p class="card-text">With having an account you can buy and access more class schedule and information</p>
     <p class="card-text">So what are you waiting for? Press the button below to register</p>
     <a href="/register" class="btn btn-primary">Register Now</a>
