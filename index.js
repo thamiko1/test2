@@ -4,12 +4,19 @@ const cookie = require("cookie-parser");
 const path = require('path');
 const sql = require('mysql');
 
+// const register = require('register');
+
 const db = sql.createConnection({
     host:"localhost",
     user: "root",
-    password: ""
+    password: "hIhqus6PCsxesojD",
+    database: "online_learning",
+    socketPath: '/var/run/mysqld/mysqld.sock'
 })
-
+db.connect((err) => {
+    if (err) throw err;
+    console.log("Database Connected..");
+})
 app.use(cookie())
 app.use(express.json())
 
@@ -28,10 +35,24 @@ app.get("/login", (req, res) =>{
 })
 app.use("/api", require("./controllers/auth"));
 
-db.connect((err) => {
-    if (err) throw err;
-    console.log("Database Connected..")
-})
+// app.post("/register", function(req, res){
+//     var email = req.body.email;
+//     console.log(req.body);
+//     var transporter = nodemailer.createTransport({
+//         service: 'gmail',
+//         auth:{
+//             user: 'thamiko123@gmail.com',
+//             pass: 'jnloxyaeufypyomh'
+//         }
+//     });
+//     var mailOptions={
+//         from: 'thamiko123@gmail.com',
+//         to: 'email',
+//         subject: 'register succeed',
+//         text: 'Your register is succeed, thanks.'
+//     }
+//     transporter.sendMail(mailOptions)
+// })
 
 app.listen(3000,()=>{
     console.log("Listening on port 3000")

@@ -4,7 +4,8 @@ const db = sql.createConnection({
     host:"localhost",
     user: "root",
     database: "online_learning",
-    password: ""
+    password: "hIhqus6PCsxesojD",
+    socketPath: '/var/run/mysqld/mysqld.sock'
 })
 const bcrypt = require("bcryptjs")
 
