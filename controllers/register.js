@@ -17,13 +17,13 @@ const register = async(req, res) => {
         console.log(Repassword);
         console.log(Npassword);
         if(Repassword != Npassword) return res.json({status: "error", error:"Your password and Confirm Password is not the same"})
-        db.query('SELECT * FROM teacher_account WHERE Username = ?', [email], async(err,result) =>{
+        db.query('SELECT * FROM student_account WHERE Username = ?', [email], async(err,result) =>{
             if (err) throw err;
             if (result[0]) return res.json ({status: "error", error: "Username has already been registered"})
             else {
                 const password = await bcrypt.hash(Npassword,8);
                 console.log(password);
-                db.query('INSERT INTO teacher_account SET ?', {Email: email,Username: Username, Name:Name, Password : password}, (error, results) => {
+                db.query('INSERT INTO student_account SET ?', {Email: email,Username: Username, Name:Name, Password : password}, (error, results) => {
                     if(error) throw error;
                 })
                 return res.json({status: "success", success: "User has been registered"});

@@ -3,7 +3,7 @@ form.addEventListener("submit", () =>{
         email: email.value,
         password: password.value
     }
-    fetch("./api/login", {
+    fetch("./api/teacherlogin", {
         method: "POST",
         body: JSON.stringify(login),
         headers: {
@@ -21,7 +21,4 @@ form.addEventListener("submit", () =>{
                 success.innerText = data.success
             }
         })
-})
-button-student.addEventListener("click",() =>{
-    document.location.href("http://localhost:3000/register")
 })

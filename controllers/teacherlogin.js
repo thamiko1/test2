@@ -8,11 +8,11 @@ const db = sql.createConnection({
 })
 const bcrypt = require("bcryptjs")
 
-const login = async(req,res) => {
+const teacher = async(req,res) => {
     const {email, password:Npassword} = req.body;
     if (!email || !Npassword) return res.json({status: "error", error : "Please Enter your Email and Password"});
     else{
-        db.query('SELECT * FROM student_account WHERE Email =?', [email], async (err, result) =>{
+        db.query('SELECT * FROM teacher_account WHERE Email =?', [email], async (err, result) =>{
             if (err) throw err;
             if (!result.length || !await bcrypt.compare(Npassword, result[0].Password) ) {
                 console.log("error");
@@ -20,18 +20,10 @@ const login = async(req,res) => {
             }
             else{
                 console.log("login sucess")
-                // const token = jwb.sign({id :result[0].id}, dfjsdfkjsdfjwjsfd, {
-                //     httpOnly: true
-                // })
-                // const cookieOption = {
-                //     expiresIn: new Date(Date.now() + 90*24*60*1000),
-                //     httpOnly: true
-                // }
-                // res.cookie("userRegistered", token, cookieOption);
                 return res.json({status: "success", success:"User has been logged In"});
             }
         })
     }
 }
 
-module.exports = login;
+module.exports = teacher;

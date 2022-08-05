@@ -31,8 +31,9 @@ app.get("/AboutUs", (req,res) => {
 app.get("/login", (req, res) =>{
     res.render("login.ejs", {root: "./views"});
 })
-
-
+app.get("/login/teacher", (req,res) => {
+    res.render('TeacherLogin.ejs', {root: "./views"});
+})
 app.get("/contactus", (req,res) => {
     res.render("ContactUs.ejs", {root:"./views"})
 })
