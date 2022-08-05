@@ -1,71 +1,63 @@
 <%- include('partials/head')%>
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register Page</title>
-</head>
-<body>
-    <div class="logo">
-      <a href="/">
-          <img src ="/img/logo.png" alt="apple logo" class="m_logo">
-      </a>
+    <style>
+      .other{
+            background-image: url('../img/background_2.jpg');
+            width: 100%;
+            height: 800px;
+            background-repeat: no-repeat; /* Do not repeat the image */
+            background-size: cover; /* Resize the background image to cover the entire container */
+        }
+    </style>
+  </head>
+  <body>
+    <div class="row other">
+    <%- include('partials/navbar')%>
+    <div class="col-sm-8" style="display: flex; justify-content: center;">
     </div>
-    <nav class="navbar navbar-expand-lg bg-dark">
-        <div class="container-fluid">
-          <!-- <a class="navbar-brand" href="#">The BRITISH CENTRE</a> -->
-          
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-link" aria-current="page" href="#">School info</a>
-              <a class="nav-link" href="#">British language school</a>
-              <a class="nav-link" href="#">Traditional chinese language school</a>
-              <a class="nav-link" href="#">Study in taiwan</a>
-              <a class="nav-link" href="#">Reviews</a>
-              <a class="nav-link" href="/login">Login</a>
-              <a class="nav-link" href="#">Register</a>
+    <div class="col-sm-4 my-6">
+      <div class="container my-5">
+        <div class = "card" style = "width: 100%">
+            <div class = "card-body" style="box-shadow: 0 8px 24px 0 rgba(252, 246, 224, 0.704);">
+                <h5 class = "card-title">Register Form</h5>
+                <form onsubmit = "return false;" id = "form">
+                    <div class="nb-3">
+                      <label for="email" class = "form-label">Email address</label>
+                      <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" autocomplete="off" required>
+                      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="nb-3">
+                      <label for="Username" class = "form-label">Username</label>
+                      <input type="text" class="form-control" id="Username" aria-describedby="emailHelp" placeholder="Enter Username" autocomplete="off" required>
+                    </div>
+                    <div class="nb-3">
+                      <label for="Name" class = "form-label">Name</label>
+                      <input type="text" class="form-control" id="Name" aria-describedby="emailHelp" placeholder="Enter Your Name" autocomplete="off" required>
+                    </div>
+                    <div class="nb-3">
+                      <label for="password" class ="form-label">Password</label>
+                      <input type="password" class="form-control" id="password" placeholder="Password" autocomplete="off" required>
+                    </div>
+                    <div class="nb-3">
+                      <label for="password" class ="form-label">Re-Enter Password</label>
+                      <input type="password" class="form-control" id="Repassword" placeholder="Re-Enter your Password" autocomplete="off" required>
+                    </div>
+                    <div class="alert alert-danger" role="alert"  id="error"   style="display: none;"></div>
+                    <div class="alert alert-success" role="alert" id="success" style="display: none;"></div>
+                    <button type="submit" class="btn btn-primary mt-5">Register</button>
+                  </form>
             </div>
           </div>
-        </div>
-      </nav>
-    <div class="container my-5">
-      <div class = "card" style = "width: 100%">
-          <div class = "card-body">
-              <h5 class = "card-title">Register Form</h5>
-              <form onsubmit = "return false;" id = "form">
-                  <div class="nb-3">
-                    <label for="email" class = "form-label">Email address</label>
-                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" autocomplete="off" required>
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                  </div>
-                  <div class="nb-3">
-                    <label for="Username" class = "form-label">Username</label>
-                    <input type="text" class="form-control" id="Username" aria-describedby="emailHelp" placeholder="Enter Username" autocomplete="off" required>
-                  </div>
-                  <div class="nb-3">
-                    <label for="Name" class = "form-label">Name</label>
-                    <input type="text" class="form-control" id="Name" aria-describedby="emailHelp" placeholder="Enter Your Name" autocomplete="off" required>
-                  </div>
-                  <div class="nb-3">
-                    <label for="password" class ="form-label">Password</label>
-                    <input type="password" class="form-control" id="password" placeholder="Password" autocomplete="off" required>
-                  </div>
-                  <div class="nb-3">
-                    <label for="password" class ="form-label">Re-Enter Password</label>
-                    <input type="password" class="form-control" id="Repassword" placeholder="Re-Enter your Password" autocomplete="off" required>
-                  </div>
-                  <div class="alert alert-danger" role="alert"  id="error"   style="display: none;"></div>
-                  <div class="alert alert-success" role="alert" id="success" style="display: none;"></div>
-                  <button type="submit" class="btn btn-primary">Register</button>
-                </form>
-          </div>
-        </div>
+      </div>
     </div>
-    <script src = "js/register.js"></script>
+  </div>
+  <script src = "js/register.js"></script>
+  <%- include('partials/footer')%>
 </body>
 </html>

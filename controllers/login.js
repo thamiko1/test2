@@ -13,9 +13,10 @@ const login = async(req,res) => {
     const {email, password:Npassword} = req.body;
     if (!email || !Npassword) return res.json({status: "error", error : "Please Enter your Email and Password"});
     else{
-        db.query('SELECT * FROM teacher_account WHERE Email =?', [email], async (err, result) =>{
+        db.query('SELECT * FROM student_account WHERE Email =?', [email], async (err, result) =>{
             if (err) throw err;
             if (!result.length || !await bcrypt.compare(Npassword, result[0].Password) ) {
+                console.log("error");
                 return res.json({status: "error", error: "Incorrect Email or password"})
             }
             else{

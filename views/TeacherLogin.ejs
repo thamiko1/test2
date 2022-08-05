@@ -1,0 +1,58 @@
+<%- include('partials/head')%>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login Page</title>
+        <style>
+            .center-both{
+                display: flex;
+                justify-content: center;
+            }
+        </style>
+</head>
+<body>
+    <div>
+        <%- include('partials/navbar')%>
+        <div class="row">
+            <div class="col-sm-8" style="display: flex; justify-content: center;">
+                <img src = "/img/login-picture.png" alt = "Image" >
+            </div>
+            <div class="col-sm-4 my-auto">
+                <div class = "container" style = "display: flex; justify-content: center;">
+                    <h6>
+                        <a  class = " btn btn-secondary "  href = "/login" type = "button" id = "button-student ">Student</a>
+                        <a  class = " btn btn-secondary "  href = "/login/teacher" type = "button" id = "button-student ">Teacher</a>
+                    </h6>
+                </div>
+                
+                <div class = "card" style="width: 70%;">
+                    <div class = "card-body" >
+                        <h5 class = "card-title">Login Form</h5>
+                        <form onsubmit = "return false;" id = "form">
+                            <div class="nb-3">
+                            <label for="email" class = "form-label">Email address</label>
+                            <input type="email" class="form-control" id="email">
+                            </div>
+                            <div class="nb-3">
+                            <label for="password" class = "form-label">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Password">
+                            </div>
+                            <div class="alert alert-danger" role="alert" id="error"    style="display: none;"></div>
+                            <div class="alert alert-success" role="alert" id="success" style="display: none;"></div>
+                            <div class="container my-3">
+                            <button type="submit" class="btn btn-primary">Login</button>
+                            <!-- <a class = "link" href="/register" style="float: right" >Does not have an account? </a> -->
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src = "js/login.js"></script>
+<%- include('partials/footer')%>
+</body>
+</html>
