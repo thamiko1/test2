@@ -22,6 +22,3 @@ form.addEventListener("submit", () =>{
             }
         })
 })
-button-student.addEventListener("click",() =>{
-    document.location.href("http://localhost:3000/register")
-})

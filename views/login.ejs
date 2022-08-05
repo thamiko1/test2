@@ -1,35 +1,33 @@
 <%- include('partials/head')%>
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Login Page</title>
-        <style>
-            .center-both{
-                display: flex;
-                justify-content: center;
-            }
-        </style>
-</head>
 <body>
-    <div>
+    <style>
+        .center-both{
+            display: flex;
+            justify-content: center;
+        }
+        .other{
+            background-image: url('../img/background_2.jpg');
+            width: 100%;
+            height: 800px;
+            background-repeat: no-repeat; /* Do not repeat the image */
+            background-size: cover; /* Resize the background image to cover the entire container */
+        }
+    </style>
+    <div class = "other">
         <%- include('partials/navbar')%>
         <div class="row">
             <div class="col-sm-8" style="display: flex; justify-content: center;">
-                <img src = "/img/login-picture.png" alt = "Image" >
             </div>
-            <div class="col-sm-4 my-auto">
-                <div class = "container" style = "display: flex; justify-content: center;">
+            <div class="col-sm-4 my-auto mt-5">
+                <div class = "container" style = "display: flex; justify-content: right; ">
                     <h6>
-                        <a  class = " btn btn-secondary "  href = "/login" type = "button" id = "button-student ">Student</a>
-                        <a  class = " btn btn-secondary "  href = "/login/teacher" type = "button" id = "button-student ">Teacher</a>
+                        <a  class = " btn btn-outline-light "  href = "/login" type = "button" id = "button-student ">Student</a>
+                        <a  class = " btn btn-outline-light"  href = "/login/teacher" type = "button" id = "button-student ">Teacher</a>
                     </h6>
                 </div>
                 
-                <div class = "card" style="width: 70%;">
-                    <div class = "card-body" >
+                <div class = "card" style="width: 70%; margin-left: 100px; box-shadow: 0 8px 24px 0 rgba(252, 246, 224, 0.704);">
+                    <div class = "card-body"  >
                         <h5 class = "card-title">Login Form</h5>
                         <form onsubmit = "return false;" id = "form">
                             <div class="nb-3">
@@ -52,7 +50,7 @@
             </div>
         </div>
     </div>
-    <script src = "js/login.js"></script>
+<script src = "js/login.js"></script>
 <%- include('partials/footer')%>
 </body>
 </html>
