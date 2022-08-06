@@ -13,21 +13,6 @@ const register = async(req, res) => {
     const {email,Username,Name ,password: Npassword,Repassword} = req.body;
     if (!email || !Npassword) return res.json({status: "error", error : "Please Enter your Username and Password"});
     else{
-        
-        var transporter = nodemailer.createTransport({
-            service: 'gmail',
-            auth:{
-                user: 'thamiko123@gmail.com',
-                pass: 'jnloxyaeufypyomh'
-            }
-        });
-        var mailOptions={
-            from: 'thamiko123@gmail.com',
-            to: email,
-            subject: 'register succeed',
-            text: 'Your register is succeed, thanks.'
-        }
-        transporter.sendMail(mailOptions)
         // db.query("SELECT * FROM teacher_account", (err, rows)=>{
         //     if (err) throw err;
         //     console.log(rows);
@@ -48,6 +33,20 @@ const register = async(req, res) => {
                 db.query('INSERT INTO teacher_account SET ?', {Email: email,Username: Username, Name:Name, Password : password}, (error, results) => {
                     if(error) throw error;
                 })
+                var transporter = nodemailer.createTransport({
+                    service: 'gmail',
+                    auth:{
+                        user: 'thamiko123@gmail.com',
+                        pass: 'jnloxyaeufypyomh'
+                    }
+                });
+                var mailOptions={
+                    from: 'thamiko123@gmail.com',
+                    to: email,
+                    subject: 'register succeed',
+                    text: 'Your register is succeed, thanks.'
+                }
+                transporter.sendMail(mailOptions)
                 return res.json({status: "success", success: "User has been registered"});
             }
         })
