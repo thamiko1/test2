@@ -46,25 +46,6 @@ app.get("/contactus", (req,res) => {
 })
 app.use("/api", require("./controllers/auth"));
 
-// app.post("/register", function(req, res){
-//     var email = req.body.email;
-//     console.log(req.body);
-//     var transporter = nodemailer.createTransport({
-//         service: 'gmail',
-//         auth:{
-//             user: 'thamiko123@gmail.com',
-//             pass: 'jnloxyaeufypyomh'
-//         }
-//     });
-//     var mailOptions={
-//         from: 'thamiko123@gmail.com',
-//         to: 'email',
-//         subject: 'register succeed',
-//         text: 'Your register is succeed, thanks.'
-//     }
-//     transporter.sendMail(mailOptions)
-// })
-
 app.listen(3000,()=>{
     console.log("Listening on port 3000")
 })

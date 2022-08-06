@@ -23,7 +23,7 @@
                 <!--Section description-->
                 <p class="text-center w-responsive mx-auto mb-5" >Do you have any questions? Our team will come back to you within
                     a matter of hours to help you.</p>
-                <form id = "form" onsubmit = "return false;"  method = "post">
+                <form onsubmit = "return false;" id = "form">
                     
                     <!--Grid row-->
                     <div class="row">
@@ -41,7 +41,8 @@
                         <div class="col-md-6 mt-3 mb-3">
                             <div class="md-form mb-0" style = "margin-right: 20px; margin-left: 20px;">
                                 <label for="email" class="">Your email</label>
-                                <input type="text" id="email" name="email" class="form-control" style = "width: 90%;">
+                                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" autocomplete="off" required>
+                                <small id="emailHelp" class="form-text text-muted"></small>
                             </div>
                         </div>
                         <!--Grid column-->
@@ -87,10 +88,11 @@
     
             <div class="col-md-3"></div>
         </div>
-        <script src = "js/ContactUs.js"></script>
+        
     </section>
 </div>
 <!--Section: Contact v.2-->    
+<script src = "js/ContactUs.js"></script>
 <%- include('partials/footer')%>    
 </body>
 </html>

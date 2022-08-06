@@ -1,6 +1,5 @@
 const sql = require("mysql");
 const nodemailer = require('nodemailer');
-
 const db = sql.createConnection({
     host:"localhost",
     database: "online_learning",
