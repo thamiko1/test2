@@ -1,26 +1,18 @@
+require("dotenv").config();
 const sql = require("mysql");
 const nodemailer = require('nodemailer');
 const db = sql.createConnection({
-    host:"localhost",
-    database: "online_learning",
+    host: process.env.DATABASE_HOST,
     user: "root",
-    password: "hIhqus6PCsxesojD",
-    socketPath: '/var/run/mysqld/mysqld.sock'
+    password: "",
+    database: "online_learning"
+    // socketPath: '/var/run/mysqld/mysqld.sock'
 })
 const bcrypt = require("bcryptjs")
 const register = async(req, res) => {
     const {email,Username,Name ,password: Npassword,Repassword} = req.body;
     if (!email || !Npassword) return res.json({status: "error", error : "Please Enter your Username and Password"});
     else{
-        // db.query("SELECT * FROM teacher_account", (err, rows)=>{
-        //     if (err) throw err;
-        //     console.log(rows);
-        // })
-        // console.log(email);
-        // console.log(Username);
-        // console.log(Name);
-        // console.log(Repassword);
-        // console.log(Npassword);
         if(Repassword != Npassword) return res.json({status: "error", error:"Your password and Confirm Password is not the same"})
         db.query('SELECT * FROM teacher_account WHERE Email = ?', [email], async(err,result) =>{
             

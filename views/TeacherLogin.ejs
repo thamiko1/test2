@@ -1,35 +1,38 @@
 <%- include('partials/head')%>
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Login Page</title>
-        <style>
-            .center-both{
-                display: flex;
-                justify-content: center;
-            }
-        </style>
-</head>
 <body>
-    <div>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <style>
+        .center-both{
+            display: flex;
+            justify-content: center;
+        }
+        .other{
+            background-image: url('../img/background_2.jpg');
+            width: 100%;
+            height: 800px;
+            background-repeat: no-repeat; /* Do not repeat the image */
+            background-size: cover; /* Resize the background image to cover the entire container */
+        }
+    </style>
+    <div class = "other">
         <%- include('partials/navbar')%>
         <div class="row">
             <div class="col-sm-8" style="display: flex; justify-content: center;">
-                <img src = "/img/login-picture.png" alt = "Image" >
             </div>
-            <div class="col-sm-4 my-auto">
-                <div class = "container" style = "display: flex; justify-content: center;">
+            <div class="col-sm-4 my-auto mt-5">
+                <div class = "container" style = "display: flex; justify-content: right; ">
                     <h6>
-                        <a  class = " btn btn-secondary "  href = "/login" type = "button" id = "button-student ">Student</a>
-                        <a  class = " btn btn-secondary "  href = "/login/teacher" type = "button" id = "button-student ">Teacher</a>
+                        <a  class = " btn btn-outline-light "  href = "/login" type = "button" id = "button-student ">Student</a>
+                        <a  class = " btn btn-outline-light"  href = "/login/teacher" type = "button" id = "button-student ">Teacher</a>
                     </h6>
                 </div>
                 
-                <div class = "card" style="width: 70%;">
-                    <div class = "card-body" >
+                <div class = "card" style="width: 70%; margin-left: 100px; box-shadow: 0 8px 24px 0 rgba(252, 246, 224, 0.704);">
+                    <div class = "card-body"  >
                         <h5 class = "card-title">Login Form</h5>
                         <form onsubmit = "return false;" id = "form">
                             <div class="nb-3">
@@ -44,7 +47,6 @@
                             <div class="alert alert-success" role="alert" id="success" style="display: none;"></div>
                             <div class="container my-3">
                             <button type="submit" class="btn btn-primary">Login</button>
-                            <!-- <a class = "link" href="/register" style="float: right" >Does not have an account? </a> -->
                             </div>
                         </form>
                     </div>
@@ -52,7 +54,7 @@
             </div>
         </div>
     </div>
-    <script src = "js/login.js"></script>
+<script src = "js/login.js"></script>
 <%- include('partials/footer')%>
 </body>
 </html>

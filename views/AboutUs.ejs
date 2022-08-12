@@ -1,59 +1,59 @@
 <%- include('partials/head')%>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
 <body>
-    <%- include('partials/navbar')%>
-    <img src = "/img/LEARNING.png" alt = "learning image" style = "width: 100%;">
-    <h2 class = "mb-2 mt-5" style="text-align: center;">About Us</h2>
-    <hr class = "mb-5">
-    <div class="row">
-        <div class="col-sm-6 " style= "display: flex; justify-content: center; margin-top:0px ;">
-            <img src = "/img/phone.png" alt = "phone image" style = "width: 40%; height: 80%;">
-        </div>
-        <div class="col-sm-6">
-            <div class="card border-primary mb-3 mt-3" style="max-width: 100%; margin-left: 10px;">
-                <div class="card-body text-primary">
-                    <p class="card-text">
-                        Traveloka is also a key player in the local services category (currently specific to certain markets), 
-                        offering reservations for a wide range of local attractions, activities, wellness and beauty clinics, 
-                        culinary directories as well as food delivery. Traveloka also offers financing, payment, and insurance 
-                        products to help Southeast Asian consumers fulfill their lifestyle aspirations. Traveloka provides 24/7 
-                        customer service in local languages as well as more than 40 different local payment methods. Traveloka’s 
-                        lifestyle superapp has been downloaded more than 100 million times, making it the most popular travel and 
-                        lifestyle booking application in the Southeast Asian region.
-                    </p>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <style>
+        .other{
+        background-image: url('../img/background_2.jpg');
+        width: 100%;
+        height: 800px;
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: cover; /* Resize the background image to cover the entire container */
+    }
+        .centered-element {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    </style>
+    <div class="other">
+        <%- include('partials/navbar')%>
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8 mt-4" style = "display: flex; justify-content: center;">
+                <div >
+                    <div class="border border-primary rounded-5" style = "background-color: white; opacity: 0.9; height: 600px; box-shadow: 0 8px 24px 0 rgba(252, 246, 224, 0.704);">
+                        <h2 class = "mb-2 mt-5" style="text-align: center;">About Us</h2>
+                        <hr class = "mb-5">
+                        <p class="text-center mt-5" style = "margin-left: 20px; margin-right: 20px; margin-top: 60px">
+                            Traveloka is also a key player in the local services category (currently specific to certain markets), 
+                            offering reservations for a wide range of local attractions, activities, wellness and beauty clinics, 
+                            culinary directories as well as food delivery. Traveloka also offers financing, payment, and insurance 
+                            products to help Southeast Asian consumers fulfill their lifestyle aspirations. Traveloka provides 24/7 
+                            customer service in local languages as well as more than 40 different local payment methods. Traveloka’s 
+                            lifestyle superapp has been downloaded more than 100 million times, making it the most popular travel and 
+                            lifestyle booking application in the Southeast Asian region.
+                        </p>
+            
+                        <p class="text-center mt-5" style = "margin-left: 20px; margin-right: 20px; margin-top: 60px;">
+                            Traveloka is also a key player in the local services category (currently specific to certain markets), 
+                            offering reservations for a wide range of local attractions, activities, wellness and beauty clinics, 
+                            culinary directories as well as food delivery. Traveloka also offers financing, payment, and insurance 
+                            products to help Southeast Asian consumers fulfill their lifestyle aspirations. Traveloka provides 24/7 
+                            customer service in local languages as well as more than 40 different local payment methods. Traveloka’s 
+                            lifestyle superapp has been downloaded more than 100 million times, making it the most popular travel and 
+                            lifestyle booking application in the Southeast Asian region.
+                        </p>
+                    </div>
                 </div>
             </div>
+            <div class="col-2"></div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-sm-6">
-            <div class="card border-primary mb-3" style="max-width: 100%; margin-left: 10px;">
-                <div class="card-body text-primary">
-                    <p class="card-text">
-                        Traveloka is also a key player in the local services category (currently specific to certain markets), 
-                        offering reservations for a wide range of local attractions, activities, wellness and beauty clinics, 
-                        culinary directories as well as food delivery. Traveloka also offers financing, payment, and insurance 
-                        products to help Southeast Asian consumers fulfill their lifestyle aspirations. Traveloka provides 24/7 
-                        customer service in local languages as well as more than 40 different local payment methods. Traveloka’s 
-                        lifestyle superapp has been downloaded more than 100 million times, making it the most popular travel and 
-                        lifestyle booking application in the Southeast Asian region.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6 " style= "display: flex; justify-content: center; margin-top:0px ;">
-            <img src = "/img/phone.png" alt = "phone image" style = "width: 40%; height: 80%;">
-        </div>
-    <img src = "/img/LEARNING.png" alt = "learning image" style = "width: 100%;">
-    </div>
-    
     <%- include('partials/footer')%>
 </body>
 </html>
